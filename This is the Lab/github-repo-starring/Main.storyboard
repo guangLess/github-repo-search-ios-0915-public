@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2kc-hk-esy">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repos Table View Controller-->
+        <scene sceneID="N4W-4X-Akb">
+            <objects>
+                <tableViewController id="i8x-fp-0v4" customClass="FISReposTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wZr-PJ-VWJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="basicCell" textLabel="7RM-IH-WNz" style="IBUITableViewCellStyleDefault" id="Z1j-1D-1rA">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z1j-1D-1rA" id="cFx-jS-8sZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7RM-IH-WNz">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="i8x-fp-0v4" id="rXH-mk-Elj"/>
+                            <outlet property="delegate" destination="i8x-fp-0v4" id="cDY-jt-1g8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="RKq-id-2NS">
+                        <barButtonItem key="leftBarButtonItem" title="Search☀︎☉☔︎☁︎☼🌩" id="dRn-pk-SJb">
+                            <connections>
+                                <action selector="searchAlert:" destination="i8x-fp-0v4" id="8vK-fR-ljL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="Php-VF-CZy">
+                            <color key="tintColor" red="0.0" green="0.34768194899999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="vJS-7d-yU0" kind="modal" id="3zO-Y5-qBM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eag-Uf-dUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="103"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="WaD-BQ-xes">
+            <objects>
+                <viewController id="vJS-7d-yU0" customClass="FISSearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ahd-cl-ps3"/>
+                        <viewControllerLayoutGuide type="bottom" id="rNG-95-FfE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2IM-rO-E7D">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="search Repo" textAlignment="center" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="gL4-pj-gYp">
+                                <rect key="frame" x="0.0" y="166" width="320" height="90"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="yic-y8-Ldn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwP-XY-ADV">
+                                <rect key="frame" x="0.0" y="302" width="320" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="ac7-JI-VXy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="go find them 😇 ">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchAction:" destination="vJS-7d-yU0" eventType="touchUpInside" id="cW4-dI-NU3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gL4-pj-gYp" firstAttribute="top" secondItem="Ahd-cl-ps3" secondAttribute="bottom" constant="146" id="6r5-5D-5es"/>
+                            <constraint firstItem="rNG-95-FfE" firstAttribute="top" secondItem="CwP-XY-ADV" secondAttribute="bottom" constant="216" id="PiD-Cg-nXp"/>
+                            <constraint firstItem="gL4-pj-gYp" firstAttribute="leading" secondItem="2IM-rO-E7D" secondAttribute="leadingMargin" constant="-20" id="TPz-qU-4fQ"/>
+                            <constraint firstItem="CwP-XY-ADV" firstAttribute="leading" secondItem="2IM-rO-E7D" secondAttribute="leadingMargin" constant="-20" id="VT3-Qs-g6R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CwP-XY-ADV" secondAttribute="trailing" constant="-20" id="i7A-DH-u60"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gL4-pj-gYp" secondAttribute="trailing" constant="-20" id="txr-VQ-9y0"/>
+                            <constraint firstItem="CwP-XY-ADV" firstAttribute="top" secondItem="gL4-pj-gYp" secondAttribute="bottom" constant="46" id="z2n-eB-k4p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchRepoString" destination="gL4-pj-gYp" id="NYL-xf-n0m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwq-Pa-8RX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1655" y="103"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="25h-OP-T0k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2kc-hk-esy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1lP-tJ-bIa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="i8x-fp-0v4" kind="relationship" relationship="rootViewController" id="Id3-RS-v25"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iUZ-BH-10u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650" y="103"/>
+        </scene>
+    </scenes>
+</document>
